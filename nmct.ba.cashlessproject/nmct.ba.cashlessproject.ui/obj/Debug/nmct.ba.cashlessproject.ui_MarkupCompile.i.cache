@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\obj\Debug\
+C:\Users\Rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\obj\Debug\
 nmct.ba.cashlessproject.ui
 none
 false
 DEBUG;TRACE
-C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\App.xaml
+C:\Users\Rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\App.xaml
 12-161971189
 
-242019342573
-23-89050146
+241655901687
+232109910922
 View\KassaLogin.xaml;View\KassaProducten.xaml;View\KassaWWVergeten.xaml;View\KlantHerlaad.xaml;View\KlantLogin.xaml;View\KlantRegistreer.xaml;View\KlantWWVergeten.xaml;View\MainWindow.xaml;View\PageOne.xaml;View\VerenigingManagementLogin.xaml;View\VerenigingManagementTabs.xaml;View\VerenigingManagementWWVergeten.xaml;
 
-False
+True
 
