@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <TabControl Grid.Column="1" Grid.Row="1" >
             <TabItem Header="Producten" Width="100">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="3*"/>
@@ -47,12 +47,12 @@
                         <ListBox Grid.Row="1" Margin="10">
 
                         </ListBox>
-                        <Button Grid.Row="2" Margin="10" Width="150" HorizontalAlignment="Left">Delete</Button>
+                        <Button Grid.Row="2" Margin="10" Width="150" Style="{StaticResource button}" HorizontalAlignment="Left">Delete</Button>
                     </Grid>
                 </Grid>
             </TabItem>
             <TabItem Header="Medewerkers" Width="100">
-                <Grid Background="#FFE5E5E5">
+                <Grid >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="3*"/>
@@ -107,7 +107,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Account" Width="100">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="10*"/>
                         <RowDefinition Height="2*"/>
@@ -136,7 +136,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Kassa's" Width="100">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="2*"/>
@@ -181,7 +181,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Klant" Width="100">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
                         <ColumnDefinition Width="2*"/>
@@ -227,7 +227,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Statistieken" Width="100">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="3*"/>
@@ -263,7 +263,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Grid.Row="1" Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top">Log out</Button>
+        <Button Grid.Row="1"  Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top">Log out</Button>
 
     </Grid>
 </Window>
