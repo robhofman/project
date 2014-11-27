@@ -7,3 +7,4 @@ C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\model\bin\Debug\mo
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\model\bin\Debug\model.pdb
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\model\obj\Debug\model.dll
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\model\obj\Debug\model.pdb
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\model\obj\Debug\nmct.ba.cashlessproject.model.csprojResolveAssemblyReference.cache

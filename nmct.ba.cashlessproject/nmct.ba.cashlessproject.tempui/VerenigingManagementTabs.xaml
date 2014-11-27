@@ -90,7 +90,7 @@
                         <TextBox Name="Telefoon" Grid.Row="5" Grid.Column="1"/>
                         <TextBox Name="StraatEnNummer" Grid.Row="7" Grid.Column="1"/>
                         <TextBox Name="Stad" Grid.Row="9" Grid.Column="1"/>
-                        <Button Name="btnSave" Grid.Row="11" Grid.Column="1" Width="100" HorizontalAlignment="Left">Save</Button>
+                        <Button Name="btnSave" Grid.Row="11" Grid.Column="1" Width="100" Style="{StaticResource button}" HorizontalAlignment="Left">Save</Button>
                     </Grid>
                     <Grid Grid.Column="0">
                         <Grid.RowDefinitions>
@@ -102,7 +102,7 @@
                         <ListBox Grid.Row="1" Margin="10">
 
                         </ListBox>
-                        <Button Grid.Row="2" Margin="10" Width="150" HorizontalAlignment="Left">Delete</Button>
+                        <Button Grid.Row="2" Margin="10" Width="150" Style="{StaticResource button}" HorizontalAlignment="Left">Delete</Button>
                     </Grid>
                 </Grid>
             </TabItem>
@@ -132,7 +132,7 @@
                     <TextBox Grid.Row="5" Grid.Column="1"></TextBox>
                     <Label Grid.Row="7">nieuw wachtwoord</Label>
                     <TextBox Grid.Row="7" Grid.Column="1"></TextBox>
-                    <Button Grid.Row="9" Grid.Column="1" Width="100">save</Button>
+                    <Button Grid.Row="9" Style="{StaticResource button}" Grid.Column="1" Width="100">save</Button>
                 </Grid>
             </TabItem>
             <TabItem Header="Kassa's" Width="100">
@@ -161,13 +161,13 @@
                                 <Grid>
                                     <Label Height="45">Kassa 1</Label>
                                     <TextBox Width="250" Height="35"></TextBox>
-                                    <Button Width="70" HorizontalAlignment="Right" Margin="8">detail</Button>
+                                    <Button Width="70" HorizontalAlignment="Right" Style="{StaticResource button}" Margin="8">detail</Button>
                                 </Grid>
 
                                 <!--hier worden de andere kassas dan aan toegevoegd-->
                             </StackPanel>
                         </ScrollViewer>
-                        <Button Grid.Row="2" Margin="30,30,390,30">Save</Button>
+                        <Button Grid.Row="2" Style="{StaticResource button}" Margin="30,30,390,30">Save</Button>
                     </Grid>
                     <Grid Grid.Column="7">
                         <Grid.RowDefinitions>
@@ -222,7 +222,7 @@
                         <TextBox Grid.Row="3" Grid.Column="2"></TextBox>
                         <Label Grid.Row="5" Grid.ColumnSpan="2">Telefoon</Label>
                         <TextBox Grid.Row="5" Grid.Column="2"></TextBox>
-                        <Button Grid.Row="7" Grid.ColumnSpan="2">Save</Button>
+                        <Button Grid.Row="7" Style="{StaticResource button}" Grid.ColumnSpan="2">Save</Button>
                     </Grid>
                 </Grid>
             </TabItem>
@@ -263,7 +263,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Grid.Row="1"  Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top">Log out</Button>
+        <Button Grid.Row="1" Style="{StaticResource button}" FontSize="12" Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top">Log out</Button>
 
     </Grid>
 </Window>

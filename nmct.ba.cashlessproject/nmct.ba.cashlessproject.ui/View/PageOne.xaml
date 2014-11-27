@@ -9,7 +9,8 @@
     <UserControl.DataContext>
         <vm:PageOneVM/>
     </UserControl.DataContext>
-    <Grid>
+    <Grid Background="AliceBlue">
+        
         <TextBlock Text="{Binding Demo}"/>
     </Grid>
 </UserControl>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\App.xaml
-2-1585582513
+12-161971189
 
-14313688500
+242019342573
 23-89050146
-View\MainWindow.xaml;View\PageOne.xaml;
+View\KassaLogin.xaml;View\KassaProducten.xaml;View\KassaWWVergeten.xaml;View\KlantHerlaad.xaml;View\KlantLogin.xaml;View\KlantRegistreer.xaml;View\KlantWWVergeten.xaml;View\MainWindow.xaml;View\PageOne.xaml;View\VerenigingManagementLogin.xaml;View\VerenigingManagementTabs.xaml;View\VerenigingManagementWWVergeten.xaml;
 
 False
 

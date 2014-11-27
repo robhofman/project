@@ -80,9 +80,67 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\KassaLogin.xaml.cs">
+      <DependentUpon>KassaLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KassaProducten.xaml.cs">
+      <DependentUpon>KassaProducten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KassaWWVergeten.xaml.cs">
+      <DependentUpon>KassaWWVergeten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KlantHerlaad.xaml.cs">
+      <DependentUpon>KlantHerlaad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KlantLogin.xaml.cs">
+      <DependentUpon>KlantLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KlantRegistreer.xaml.cs">
+      <DependentUpon>KlantRegistreer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KlantWWVergeten.xaml.cs">
+      <DependentUpon>KlantWWVergeten.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PageOne.xaml.cs">
       <DependentUpon>PageOne.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\VerenigingManagementLogin.xaml.cs">
+      <DependentUpon>VerenigingManagementLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VerenigingManagementTabs.xaml.cs">
+      <DependentUpon>VerenigingManagementTabs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VerenigingManagementWWVergeten.xaml.cs">
+      <DependentUpon>VerenigingManagementWWVergeten.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\KassaLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KassaProducten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KassaWWVergeten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KlantHerlaad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KlantLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KlantRegistreer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KlantWWVergeten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,6 +158,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\PageOne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VerenigingManagementLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VerenigingManagementTabs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VerenigingManagementWWVergeten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
