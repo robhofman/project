@@ -23,8 +23,9 @@ namespace nmct.ba.cashlessproject.api.Models
                     {
                         Id = Convert.ToInt32(reader["ID"]),
                         Customername = reader["CustomerName"].ToString()
+                        
                     });
-
+                Console.WriteLine(reader["CustomerName"].ToString());
             }
             return list;
         }
