@@ -58,3 +58,5 @@ C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlesspr
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\obj\Debug\View\VerenigingManagementTabs.g.cs
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\obj\Debug\View\VerenigingManagementWWVergeten.baml
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\obj\Debug\View\VerenigingManagementWWVergeten.g.cs
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\bin\Debug\Thinktecture.IdentityModel.Client.dll
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\bin\Debug\Thinktecture.IdentityModel.Client.pdb

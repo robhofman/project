@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nmct.ba.cashlessproject.model
 {
-    class RegisterKassa
+    public class RegisterKassa
     {
         private int _id;
         private string _registername;
