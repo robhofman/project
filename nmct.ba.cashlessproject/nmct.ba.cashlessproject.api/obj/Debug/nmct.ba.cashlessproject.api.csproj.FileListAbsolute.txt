@@ -63,3 +63,5 @@ C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlesspr
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\obj\Debug\nmct.ba.cashlessproject.api.csprojResolveAssemblyReference.cache
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\obj\Debug\nmct.ba.cashlessproject.api.dll
 C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\obj\Debug\nmct.ba.cashlessproject.api.pdb
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\bin\nmct.ba.cashless.helper.dll
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\bin\nmct.ba.cashless.helper.pdb

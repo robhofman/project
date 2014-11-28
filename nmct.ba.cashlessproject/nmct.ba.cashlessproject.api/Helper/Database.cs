@@ -21,6 +21,8 @@ namespace nmct.ba.cashlessproject.api.Helper
 
         public static DbConnection GetConnection(string ConnectionString)
         {
+            
+            
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[ConnectionString];
             return GetConnection(settings);
         }

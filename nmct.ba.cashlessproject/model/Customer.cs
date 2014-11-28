@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace nmct.ba.cashlessproject.model
 {
-    public class Customer
+    public class RegisterKassa
     {
         private int _id;
         private string _customername;

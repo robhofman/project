@@ -15,12 +15,15 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
     {
         public CustomerVM()
         {
-            GetCustomers();
+            if (ApplicationVM.token != null)
+            {
+                GetCustomers();
+            }
         }
 
-        private ObservableCollection<Customer> _customers;
+        private ObservableCollection<RegisterKassa> _customers;
 
-        public ObservableCollection<Customer> Customers
+        public ObservableCollection<RegisterKassa> Customers
         {
             get { return _customers; }
             set { _customers = value; OnPropertyChanged("Customers"); }
@@ -31,11 +34,11 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
             using (HttpClient client = new HttpClient())
             {
                 client.SetBearerToken(ApplicationVM.token.AccessToken);
-                HttpResponseMessage response = await client.GetAsync("http://localhost:31929/api/customer");
+                HttpResponseMessage response = await client.GetAsync("http://localhost:15237/api/customer");
                 if (response.IsSuccessStatusCode)
                 {
                     string json = await response.Content.ReadAsStringAsync();
-                    Customers = JsonConvert.DeserializeObject<ObservableCollection<Customer>>(json);
+                    Customers = JsonConvert.DeserializeObject<ObservableCollection<RegisterKassa>>(json);
                 }
             }
         }

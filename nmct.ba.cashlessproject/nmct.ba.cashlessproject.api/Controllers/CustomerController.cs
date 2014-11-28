@@ -10,12 +10,13 @@ using System.Web.Http;
 
 namespace nmct.ba.cashlessproject.api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class CustomerController: ApiController
     {
         //ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
-        public List<Customer> Get()
+        public List<RegisterKassa> Get()
         {
+            //ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
             return CustomerDA.GetCustomers();
         }
     }

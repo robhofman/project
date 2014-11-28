@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.DataContext>
-        <vm:PageOneVM/>
+        <vm:CustomerVM/>
     </UserControl.DataContext>
     <Grid Background="AliceBlue">
-        
-        <TextBlock Text="{Binding Demo}"/>
+        <ListBox ItemsSource="{Binding Customers}"/>
+        <!--<TextBlock Text="{Binding Demo}"/>-->
     </Grid>
 </UserControl>
