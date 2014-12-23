@@ -1,14 +1,16 @@
-﻿using nmct.ba.cashlessproject.model;
+﻿using Newtonsoft.Json;
+using nmct.ba.cashlessproject.model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace nmct.ba.cashlessproject.ui.ViewModel
 {
-    class ErrorlogVM
+    class ErrorlogVM: ObservableObject, IPage
     {
       public ErrorlogVM()
             {
@@ -23,7 +25,7 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
         public ObservableCollection<Errorlog> Errorlogs
             {
                 get { return _errorlogs; }
-                set { _errorlogs = value; OnPropertyChanged("Organisations"); }
+                set { _errorlogs = value; OnPropertyChanged("Errorlog"); }
             }
 
             private async void GetErrorlogs()
@@ -35,13 +37,13 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
                     if (response.IsSuccessStatusCode)
                     {
                         string json = await response.Content.ReadAsStringAsync();
-                        Errorlogs = JsonConvert.DeserializeObject<ObservableCollection<Organisation>>(json);
+                        Errorlogs = JsonConvert.DeserializeObject<ObservableCollection<Errorlog>>(json);
                     }
                 }
             }
             public string Name
             {
-                get { return "Organisation page"; }
+                get { return "Errorlog page"; }
             }
         }
     }

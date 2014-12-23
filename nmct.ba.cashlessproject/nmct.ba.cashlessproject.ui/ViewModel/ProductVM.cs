@@ -1,8 +1,10 @@
-﻿using nmct.ba.cashlessproject.model;
+﻿using Newtonsoft.Json;
+using nmct.ba.cashlessproject.model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,10 +22,11 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
 
         private ObservableCollection<Product> _products;
 
-        public ObservableCollection<Product> Organisations
+        public ObservableCollection<Product> Products
+
             {
                 get { return _products; }
-                set { _products = value; OnPropertyChanged("Organisations"); }
+                set { _products = value; OnPropertyChanged("Products"); }
             }
 
             private async void GetProducts()
@@ -35,13 +38,13 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
                     if (response.IsSuccessStatusCode)
                     {
                         string json = await response.Content.ReadAsStringAsync();
-                        Organisations = JsonConvert.DeserializeObject<ObservableCollection<Organisation>>(json);
+                        Products = JsonConvert.DeserializeObject<ObservableCollection<Product>>(json);
                     }
                 }
             }
             public string Name
             {
-                get { return "Organisation page"; }
+                get { return "Product page"; }
             }
         }
     }

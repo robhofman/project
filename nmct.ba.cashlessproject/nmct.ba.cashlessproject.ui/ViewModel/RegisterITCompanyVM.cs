@@ -1,8 +1,10 @@
-﻿using nmct.ba.cashlessproject.model;
+﻿using Newtonsoft.Json;
+using nmct.ba.cashlessproject.model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,7 +25,7 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
         public ObservableCollection<RegisterITCompany> RegistersITCompany
             {
                 get { return _registersITCompany; }
-                set { _registersITCompany = value; OnPropertyChanged("Organisations"); }
+                set { _registersITCompany = value; OnPropertyChanged("RegisterITCompany"); }
             }
 
             private async void GetRegistersITCompany()
@@ -35,13 +37,13 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
                     if (response.IsSuccessStatusCode)
                     {
                         string json = await response.Content.ReadAsStringAsync();
-                        RegistersITCompany = JsonConvert.DeserializeObject<ObservableCollection<Organisation>>(json);
+                        RegistersITCompany = JsonConvert.DeserializeObject<ObservableCollection<RegisterITCompany>>(json);
                     }
                 }
             }
             public string Name
             {
-                get { return "Organisation page"; }
+                get { return "RegistersITCompany page"; }
             }
         }
     }

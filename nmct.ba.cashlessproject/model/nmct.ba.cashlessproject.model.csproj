@@ -44,10 +44,13 @@
     <Compile Include="Employee.cs" />
     <Compile Include="Errorlog.cs" />
     <Compile Include="Organisation.cs" />
+    <Compile Include="Password.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterITCompany.cs" />
     <Compile Include="RegisterKassa.cs" />
+    <Compile Include="Register_Employee.cs" />
+    <Compile Include="Sale.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

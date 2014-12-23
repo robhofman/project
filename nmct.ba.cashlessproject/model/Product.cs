@@ -10,9 +10,9 @@ namespace nmct.ba.cashlessproject.model
     {
         private int _id;
         private string _productname;
-        private int _price;
+        private double _price;
 
-        public int Price
+        public double Price
         {
             get { return _price; }
             set { _price = value; }

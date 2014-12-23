@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace nmct.ba.cashlessproject.ui.ViewModel
 {
-    class ObservableObject : INotifyPropertyChanged
+    public class ObservableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

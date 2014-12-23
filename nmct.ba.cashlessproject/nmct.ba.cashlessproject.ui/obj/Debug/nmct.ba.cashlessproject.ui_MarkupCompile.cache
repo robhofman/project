@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\obj\Debug\
+C:\Users\rob\Documents\GitHub\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\obj\Debug\
 nmct.ba.cashlessproject.ui
 none
 false
 DEBUG;TRACE
-C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\App.xaml
-12-161971189
+C:\Users\rob\Documents\GitHub\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ui\App.xaml
+13562971274
 
-21311073834
-74-2115331461
-View\KassaLogin.xaml;View\KassaProducten.xaml;View\KassaWWVergeten.xaml;View\KlantHerlaad.xaml;View\KlantLogin.xaml;View\KlantRegistreer.xaml;View\KlantWWVergeten.xaml;View\MainWindow.xaml;View\PageOne.xaml;View\VerenigingManagementLogin.xaml;View\VerenigingManagementTabs.xaml;View\VerenigingManagementWWVergeten.xaml;
+33-1775080460
+761395764729
+View\KassaLogin.xaml;View\KassaProducten.xaml;View\KassaWWVergeten.xaml;View\KiesApp.xaml;View\KlantHerlaad.xaml;View\KlantLogin.xaml;View\KlantRegistreer.xaml;View\KlantWWVergeten.xaml;View\MainWindow.xaml;View\PageOne.xaml;View\VerenigingManagementLogin.xaml;View\VerenigingManagementTabs.xaml;View\VerenigingManagementWWVergeten.xaml;
 
 False
 

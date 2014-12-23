@@ -7,30 +7,18 @@ using System.Drawing;
 
 namespace nmct.ba.cashlessproject.model
 {
-    public class RegisterKassa
+    public class Customer
     {
         private int _id;
         private string _customername;
         private string _address;
-        private Image _image;
-        private int _balance;
+        private byte[] _image;
+        private double _balance;
 
-        public int Balance
+        public int Id
         {
-            get { return _balance; }
-            set { _balance = value; }
-        }
-
-        public Image Image
-        {
-            get { return _image; }
-            set { _image = value; }
-        }
-
-        public string Address
-        {
-            get { return _address; }
-            set { _address = value; }
+            get { return _id; }
+            set { _id = value; }
         }
 
         public string Customername
@@ -39,10 +27,27 @@ namespace nmct.ba.cashlessproject.model
             set { _customername = value; }
         }
 
-        public int Id
+        public string Address
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _address; }
+            set { _address = value; }
         }
+
+        public byte[] Image
+        {
+            get { return _image; }
+            set { _image = value; }
+        }
+
+        public double Balance
+        {
+            get { return _balance; }
+            set { _balance = value; }
+        }
+
+
+
+
+
     }
 }

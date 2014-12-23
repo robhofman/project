@@ -31,6 +31,14 @@ namespace nmct.ba.cashlessproject.api
             app.UseCookieAuthentication(new CookieAuthenticationOptions());
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
+
+            app.UseOAuthAuthorizationServer(new OAuthAuthorizationServerOptions()
+            {
+                AllowInsecureHttp = true,
+                TokenEndpointPath = new PathString("/token"),
+                AccessTokenExpireTimeSpan = TimeSpan.FromHours(8),
+                Provider = new SimpleAuthorizationServerProvider()
+            });
             // Configure the application for OAuth based flow
             PublicClientId = "self";
             OAuthOptions = new OAuthAuthorizationServerOptions

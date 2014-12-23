@@ -3,8 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:nmct.ba.cashlessproject.ui.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1100">
+    <UserControl.DataContext>
+        <vm:KlantLoginVM/>
+    </UserControl.DataContext>
     <Grid Background="WhiteSmoke">
         <Grid.RowDefinitions>
             <RowDefinition Height="15"/>
@@ -18,252 +22,290 @@
         </Grid.ColumnDefinitions>
         <TabControl Grid.Column="1" Grid.Row="1" >
             <TabItem Header="Producten" Width="100">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="7*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="20*"/>
-                        </Grid.RowDefinitions>
+                <UserControl>
+                    <UserControl.DataContext>
+                        <vm:ProductVM/>
+                    </UserControl.DataContext>
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Row="1" HorizontalAlignment="Center">Productnaam</Label>
-                        <Label Grid.Row="3" HorizontalAlignment="Center">Prijs in euro</Label>
-                        <TextBox Grid.Row="1" Grid.Column="1" Margin="5"></TextBox>
-                        <TextBox Grid.Row="3" Grid.Column="1" Margin="5"></TextBox>
-                    </Grid>
-                    <Grid Grid.Column="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="20*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                        </Grid.RowDefinitions>
-                        <ListBox Grid.Row="1" Margin="10">
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="7*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="20*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="1" HorizontalAlignment="Center">Productnaam</Label>
+                            <Label Grid.Row="3" HorizontalAlignment="Center">Prijs in euro</Label>
+                            <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Name="txtProductName" ></TextBox>
+                            <TextBox Grid.Row="3" Grid.Column="1" Margin="5" Name="txtPrijs"></TextBox>
+                        </Grid>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                            </Grid.RowDefinitions>
+                            <ListBox Grid.Row="1" Margin="10">
 
-                        </ListBox>
-                        <Button Grid.Row="2" Margin="10" Width="150" Style="{StaticResource button}" HorizontalAlignment="Left">Delete</Button>
+                            </ListBox>
+                            <Button Grid.Row="2" Margin="10" Width="150" Style="{StaticResource button}" HorizontalAlignment="Left">Delete</Button>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </UserControl>
             </TabItem>
             <TabItem Header="Medewerkers" Width="100">
-                <Grid >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="2*"/>
+                <UserControl>
+                    <UserControl.DataContext>
+                        <vm:EmployeeVM/>
+                    </UserControl.DataContext>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="6*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
 
-                            <RowDefinition Height="7*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="8"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Margin="70,0,0,0" Grid.Row="1">Naam:</Label>
+                            <Label Margin="70,0,0,0" Grid.Row="3">E-mail:</Label>
+                            <Label Margin="70,0,0,0" Grid.Row="5">Telefoon:</Label>
+                            <Label Margin="70,0,0,0" Grid.Row="7">Adres (Straat + nr + Stad):</Label>
+
+
+                            <TextBox Name="Naam" Grid.Row="1" Grid.Column="1" Text="{Binding SelectedEmployee.Employeename, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox Name="Email" Grid.Row="3" Grid.Column="1" Text="{Binding SelectedEmployee.Email, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox Name="Telefoon" Grid.Row="5" Grid.Column="1" Text="{Binding SelectedEmployee.Phone, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox Name="StraatEnNummer" Grid.Row="7" Grid.Column="1" Text="{Binding SelectedEmployee.Address, UpdateSourceTrigger=PropertyChanged}"/>
+                            <!--<TextBox Name="txtID" Grid.Row="9" Grid.Column="1" Text="{Binding Id, UpdateSourceTrigger=PropertyChanged}"/>-->
+                            <Button Name="btnSave" Grid.Row="11" Grid.Column="1" Width="100" Command="{Binding SaveEmployeeCommand}" Style="{StaticResource button}" HorizontalAlignment="Left">Save</Button>
+                            <Button Name="btnNew" Grid.Row="11" Grid.Column="1" Margin="150,0,0,0" Width="100" Command="{Binding NewEmployeeCommand}" Style="{StaticResource button}" HorizontalAlignment="Left">New</Button>
+                        </Grid>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="20*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                            </Grid.RowDefinitions>
+                            <ListBox Grid.Row="1" Margin="10" ItemsSource="{Binding Employees}" SelectedItem="{Binding SelectedEmployee}" DisplayMemberPath="Employeename">
+
+                            </ListBox>
+                            <Button Grid.Row="2" Margin="10" Width="150" Style="{StaticResource button}" Command="{Binding DeleteEmployeeCommand}" HorizontalAlignment="Left">Delete</Button>
+                        </Grid>
+                    </Grid>
+                </UserControl>
+            </TabItem>
+            <TabItem Header="Account" Width="100">
+                <UserControl>
+                    <UserControl.DataContext>
+                        <vm:WijzigWWManagement/>
+                    </UserControl.DataContext>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="15*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="8"/>
                         </Grid.ColumnDefinitions>
-                        <Label Margin="70,0,0,0" Grid.Row="1">Naam:</Label>
-                        <Label Margin="70,0,0,0" Grid.Row="3">E-mail:</Label>
-                        <Label Margin="70,0,0,0" Grid.Row="5">Telefoon:</Label>
-                        <Label Margin="70,0,0,0" Grid.Row="7">Straat +nr:</Label>
-                        <Label Margin="70,0,0,0" Grid.Row="9">Stad:</Label>
-
-                        <TextBox Name="Naam" Grid.Row="1" Grid.Column="1"/>
-                        <TextBox Name="Email" Grid.Row="3" Grid.Column="1"/>
-                        <TextBox Name="Telefoon" Grid.Row="5" Grid.Column="1"/>
-                        <TextBox Name="StraatEnNummer" Grid.Row="7" Grid.Column="1"/>
-                        <TextBox Name="Stad" Grid.Row="9" Grid.Column="1"/>
-                        <Button Name="btnSave" Grid.Row="11" Grid.Column="1" Width="100" Style="{StaticResource button}" HorizontalAlignment="Left">Save</Button>
+                        <TextBlock Grid.Row="1">Wachtwoord Wijzigen</TextBlock>
+                        <Label Grid.Row="3">Gebruikersnaam</Label>
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Username}"></TextBox>
+                        <Label Grid.Row="5">wachtwoord</Label>
+                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding NewPassword}"></TextBox>
+                        <Label Grid.Row="7">herhaal wachtwoord</Label>
+                        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Repeat}"></TextBox>
+                        <Button Grid.Row="9" Style="{StaticResource button}" Command="{Binding ChangePasswordCommand}" Grid.Column="1" Width="100">save</Button>
                     </Grid>
-                    <Grid Grid.Column="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="20*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                        </Grid.RowDefinitions>
-                        <ListBox Grid.Row="1" Margin="10">
-
-                        </ListBox>
-                        <Button Grid.Row="2" Margin="10" Width="150" Style="{StaticResource button}" HorizontalAlignment="Left">Delete</Button>
-                    </Grid>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Account" Width="100">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="10*"/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="3*"/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="3*"/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="3*"/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="3*"/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="15*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="3*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="1">Wachtwoord Wijzigen</TextBlock>
-                    <Label Grid.Row="3">oud wachtwoord</Label>
-                    <TextBox Grid.Row="3" Grid.Column="1"></TextBox>
-                    <Label Grid.Row="5">nieuw wachtwoord</Label>
-                    <TextBox Grid.Row="5" Grid.Column="1"></TextBox>
-                    <Label Grid.Row="7">nieuw wachtwoord</Label>
-                    <TextBox Grid.Row="7" Grid.Column="1"></TextBox>
-                    <Button Grid.Row="9" Style="{StaticResource button}" Grid.Column="1" Width="100">save</Button>
-                </Grid>
+                </UserControl>
             </TabItem>
             <TabItem Header="Kassa's" Width="100">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="0.2*"/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition Width="0.2*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                <UserControl>
+                    <UserControl.DataContext>
+                        <vm:RegisterVM/>
+                    </UserControl.DataContext>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="0.2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="0.2*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
 
-                    <Grid Grid.ColumnSpan="6">
+                        <Grid Grid.ColumnSpan="6">
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="9*"/>
-                            <RowDefinition Height="2*"/>
-                        </Grid.RowDefinitions>
-                        <ScrollViewer Grid.Row="1">
-                            <StackPanel>
-                                <Grid>
-                                    <Label Height="45">Kassa 1</Label>
-                                    <TextBox Width="250" Height="35"></TextBox>
-                                    <Button Width="70" HorizontalAlignment="Right" Style="{StaticResource button}" Margin="8">detail</Button>
-                                </Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            <ListView Grid.Row="1" Margin="15" ItemsSource="{Binding Registers}" SelectedItem="{Binding SelectedRegister}">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Width="150" Header="Id" DisplayMemberBinding="{Binding Path=Id}" />
+                                        <GridViewColumn Width="100" Header="Naam" DisplayMemberBinding="{Binding Path=Registername}"  />
+                                        <GridViewColumn Width="100" Header="device" DisplayMemberBinding="{Binding Path=Device}"/>
+                                    </GridView>
+                                </ListView.View>
 
-                                <!--hier worden de andere kassas dan aan toegevoegd-->
-                            </StackPanel>
-                        </ScrollViewer>
-                        <Button Grid.Row="2" Style="{StaticResource button}" Margin="30,30,390,30">Save</Button>
+                            </ListView>
+                            <Button Grid.Row="2" Style="{StaticResource button}" Margin="30,30,390,30">Save</Button>
+                        </Grid>
+                        <Grid Grid.Column="7">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="4*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0">Werknemers</TextBlock>
+                            <ListBox Grid.Row="1" ItemsSource="{Binding SelectedRegister.Medewerkers}" DisplayMemberPath="Employeename"></ListBox>
+                        </Grid>
                     </Grid>
-                    <Grid Grid.Column="7">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="4*"/>
-                            <RowDefinition Height="2*"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0">Kassa 1</TextBlock>
-                        <ListBox Grid.Row="1"></ListBox>
-                    </Grid>
-                </Grid>
+
+                </UserControl>
             </TabItem>
             <TabItem Header="Klant" Width="100">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition Width="30"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="5*"/>
-                            <RowDefinition Height="1*"/>
-
-                        </Grid.RowDefinitions>
-                        <TextBlock>Klanten met gespendeerd bedrag</TextBlock>
-                        <ListBox Grid.Row="1"></ListBox>
-                    </Grid>
-                    <Grid Grid.Column="3">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="9*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="9*"/>
-                        </Grid.RowDefinitions>
+                <UserControl>
+                    <UserControl.DataContext>
+                        <vm:CustomerVM/>
+                    </UserControl.DataContext>
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="105*"/>
-                            <ColumnDefinition Width="127*"/>
-                            <ColumnDefinition Width="348*"/>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="30"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Row="1" Grid.ColumnSpan="2">Naam</Label>
-                        <TextBox Grid.Row="1" Grid.Column="2"></TextBox>
-                        <Label Grid.Row="3" Grid.ColumnSpan="2">Saldo</Label>
-                        <TextBox Grid.Row="3" Grid.Column="2"></TextBox>
-                        <Label Grid.Row="5" Grid.ColumnSpan="2">Telefoon</Label>
-                        <TextBox Grid.Row="5" Grid.Column="2"></TextBox>
-                        <Button Grid.Row="7" Style="{StaticResource button}" Grid.ColumnSpan="2">Save</Button>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="1*"/>
+
+                            </Grid.RowDefinitions>
+                            <TextBlock>Klanten met gespendeerd bedrag</TextBlock>
+                            <!--<ListBox Grid.Row="1" ItemsSource="{Binding Customers}" DisplayMemberPath="Customername"/>-->
+                            <ListView Grid.Row="1" x:Name="lstCustomers" ItemsSource="{Binding Customers}" SelectedItem="{Binding SelectedCustomer}">
+                            <ListView.View>
+                               <GridView>
+                                        <GridViewColumn Width="150" Header="Naam" DisplayMemberBinding="{Binding Path=Customername}" />
+                                        <GridViewColumn Width="100" Header="Saldo" DisplayMemberBinding="{Binding Path=Balance}"  />
+                                        <GridViewColumn Width="100" Header="Adres" DisplayMemberBinding="{Binding Path=Address}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        </Grid>
+                        <Grid Grid.Column="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="9*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="105*"/>
+                                <ColumnDefinition Width="127*"/>
+                                <ColumnDefinition Width="348*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="1" Grid.ColumnSpan="2">Naam</Label>
+                            <TextBox Grid.Row="1"  Grid.Column="2" Name="txtKlantNaam" Text="{Binding CustomerName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                            <Label Grid.Row="3" Grid.ColumnSpan="2">Saldo</Label>
+                            <TextBox Grid.Row="3" Grid.Column="2" Name="txtKlantSaldo" Text="{Binding Balance, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                            <Label Grid.Row="5" Grid.ColumnSpan="2">Adres</Label>
+                            <TextBox Grid.Row="5" Grid.Column="2" Name="txtKlantAdres" Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                            <Button Grid.Row="7" Name="btnUpdate" Command="{Binding UpdateCustomerCommand}" Style="{StaticResource button}" Grid.ColumnSpan="2">update</Button>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </UserControl>
             </TabItem>
             <TabItem Header="Statistieken" Width="100">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition/>
-                        <RowDefinition Height="2*"/>
-                    </Grid.RowDefinitions>
-                    <ComboBox Grid.Column="1" Grid.Row="1">producten</ComboBox>
-                    <Label Grid.Row="3">van</Label>
-                    <DatePicker Grid.Row="3" Grid.Column="1" Name="dpcVanProduct"/>
-                    <Label Grid.Row="3" Grid.Column="2">tot</Label>
-                    <DatePicker Grid.Row="3" Grid.Column="3" Name="dpcTotProduct"/>
-                    <ComboBox Grid.Column="1" Grid.Row="5">kassa</ComboBox>
-                    <Label Grid.Row="7">van</Label>
-                    <DatePicker Grid.Row="7" Grid.Column="1" Name="dpcVanKassa"/>
-                    <Label Grid.Row="7" Grid.Column="2">tot</Label>
-                    <DatePicker Grid.Row="7" Grid.Column="3" Name="dpcTotKassa"/>
-                    <TextBlock Grid.Row="2" Grid.Column="5">€0</TextBlock>
-                    <TextBlock Grid.Row="6" Grid.Column="5">€0</TextBlock>
-                </Grid>
+                <UserControl>
+                    
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <ComboBox Grid.Column="1" Grid.Row="1">producten</ComboBox>
+                        <Label Grid.Row="3">van</Label>
+                        <DatePicker Grid.Row="3" Grid.Column="1" Name="dpcVanProduct"/>
+                        <Label Grid.Row="3" Grid.Column="2">tot</Label>
+                        <DatePicker Grid.Row="3" Grid.Column="3" Name="dpcTotProduct"/>
+                        <ComboBox Grid.Column="1" Grid.Row="5">kassa</ComboBox>
+                        <Label Grid.Row="7">van</Label>
+                        <DatePicker Grid.Row="7" Grid.Column="1" Name="dpcVanKassa"/>
+                        <Label Grid.Row="7" Grid.Column="2">tot</Label>
+                        <DatePicker Grid.Row="7" Grid.Column="3" Name="dpcTotKassa"/>
+                        <TextBlock Grid.Row="2" Grid.Column="5">€0</TextBlock>
+                        <TextBlock Grid.Row="6" Grid.Column="5">€0</TextBlock>
+                    </Grid>
+                </UserControl>
             </TabItem>
         </TabControl>
         <Button Grid.Row="1" Style="{StaticResource button}" FontSize="12" Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top">Log out</Button>

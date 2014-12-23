@@ -9,15 +9,13 @@ using Thinktecture.IdentityModel.Client;
 
 namespace nmct.ba.cashlessproject.ui.ViewModel
 {
-    class ApplicationVM : ObservableObject
+    public class ApplicationVM : ObservableObject
     {
         public static TokenResponse token = null;
-        //de tokenresponse hebben we met de packetmanager erbij geplaatst.
 
         public ApplicationVM()
         {
-            Pages.Add(new PageOneVM());
-            // Add other pages
+            Pages.Add(new KiesAppVM());
 
             CurrentPage = Pages[0];
         }
@@ -45,7 +43,7 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
             get { return new RelayCommand<IPage>(ChangePage); }
         }
 
-        private void ChangePage(IPage page)
+        public void ChangePage(IPage page)
         {
             CurrentPage = page;
         }

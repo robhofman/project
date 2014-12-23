@@ -11,6 +11,7 @@ namespace nmct.ba.cashlessproject.api.Helper
 {
     class Database
     {
+
         public static ConnectionStringSettings CreateConnectionString(string provider, string server, string database, string username, string password)
         {
             ConnectionStringSettings settings = new ConnectionStringSettings();
@@ -21,8 +22,6 @@ namespace nmct.ba.cashlessproject.api.Helper
 
         public static DbConnection GetConnection(string ConnectionString)
         {
-            
-            
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[ConnectionString];
             return GetConnection(settings);
         }
@@ -31,6 +30,8 @@ namespace nmct.ba.cashlessproject.api.Helper
         {
             DbConnection con = DbProviderFactories.GetFactory(Settings.ProviderName).CreateConnection();
             con.ConnectionString = Settings.ConnectionString;
+            string c = con.ConnectionString;
+            string k = c;
             con.Open();
 
             return con;

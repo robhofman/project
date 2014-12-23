@@ -5,7 +5,7 @@ using System.Text;
 
 namespace nmct.ba.cashlessproject.model
 {
-    public class Errorlog
+    public class Organisation
     {
         private int _id;
         private string _login;

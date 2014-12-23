@@ -20,9 +20,9 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
                 }
             }
 
-        private ObservableCollection<Errorlog> _organisations;
+        private ObservableCollection<Organisation> _organisations;
 
-        public ObservableCollection<Errorlog> Organisations
+        public ObservableCollection<Organisation> Organisations
             {
                 get { return _organisations; }
                 set { _organisations = value; OnPropertyChanged("Organisations"); }
@@ -37,7 +37,7 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
                     if (response.IsSuccessStatusCode)
                     {
                         string json = await response.Content.ReadAsStringAsync();
-                        Organisations = JsonConvert.DeserializeObject<ObservableCollection<Errorlog>>(json);
+                        Organisations = JsonConvert.DeserializeObject<ObservableCollection<Organisation>>(json);
                     }
                 }
             }

@@ -29,5 +29,12 @@ namespace nmct.ba.cashlessproject.model
             get { return _id; }
             set { _id = value; }
         }
+        private List<Employee> _medewerkers;
+
+        public List<Employee> Medewerkers
+        {
+            get { return _medewerkers; }
+            set { _medewerkers = value; }
+        }
     }
 }
