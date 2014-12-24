@@ -7,11 +7,11 @@
              xmlns:vm="clr-namespace:nmct.ba.cashlessproject.ui.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <UserControl.Resources>
-        <DataTemplate DataType="{x:Type vm:KlantLoginVM}">
-            <v:KlantLogin/>
+    <!--<UserControl.Resources>
+        <DataTemplate DataType="{x:Type vm:ManagementLoginVM}">
+            <v:VerenigingManagementLogin/>
         </DataTemplate>
-    </UserControl.Resources>
+    </UserControl.Resources>-->
     <UserControl.DataContext>
         <vm:KiesAppVM/>
     </UserControl.DataContext>
@@ -29,7 +29,7 @@
 
         <Button Content="klant" Margin="31,23,14,18" Grid.Row="1" Command="{Binding GaNaarKlantCommand}"/>
         <Button Content="management" Margin="12,23,11,18" Grid.Row="1" Grid.Column="1" Command="{Binding GaNaarManagementCommand}"/>
-        <Button Content="kassa" Margin="8,23,32,18"  Grid.Row="1" Grid.Column="2" Command="{Binding naarMedewerker}"/>
+        <Button Content="kassa" Margin="8,23,32,18"  Grid.Row="1" Grid.Column="2" Command="{Binding GaNaarMedewerkerCommand}"/>
 
 
     </Grid>

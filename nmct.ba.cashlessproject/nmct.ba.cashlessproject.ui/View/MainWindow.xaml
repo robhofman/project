@@ -20,9 +20,13 @@
         <DataTemplate DataType="{x:Type vm:ManagementLoginVM}">
             <v:VerenigingManagementLogin/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:CustomerVM}">
+        <DataTemplate DataType="{x:Type vm:ProductVM}">
             <v:VerenigingManagementTabs/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:KlantRegistreerVM}">
+            <v:KlantRegistreer/>
+        </DataTemplate>
+        
     </Window.Resources>
     <Window.DataContext>
         <vm:ApplicationVM/>

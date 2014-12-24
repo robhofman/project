@@ -7,7 +7,12 @@
              xmlns:v="clr-namespace:nmct.ba.cashlessproject.ui.View"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1100">
-    
+
+    <!--<UserControl.Resources>
+        <DataTemplate DataType="{x:Type vm:KlantLoginVM}">
+            <v:KlantRegistreer/>
+        </DataTemplate>
+    </UserControl.Resources>-->
     <UserControl.DataContext>
         <vm:KlantLoginVM/>
     </UserControl.DataContext>
@@ -28,8 +33,8 @@
 
         <TextBox Grid.Row="2" Grid.Column="1" Width="300" Margin="5"></TextBox>
 
-        <Button Grid.Row="6" Style="{StaticResource button}" FontSize="17" Width="175px" Margin="362,0,555,0">Wachtwoord Vergeten</Button>
-        <Button Grid.Row="6" Style="{StaticResource button}" Width="175px"  Margin="562,0,355,0">Log in</Button>
-        <Button Grid.Row="8" Style="{StaticResource button}" Width="200px">Registreer</Button>
+        <!--<Button Grid.Row="6" Style="{StaticResource button}" FontSize="17" Width="175px" Margin="362,0,555,0">Wachtwoord Vergeten</Button>-->
+        <Button Grid.Row="6" Style="{StaticResource button}" Width="175px" >Log in</Button>
+        <Button Grid.Row="8" Command="{Binding GaNaarRegistrerenCommand}" Style="{StaticResource button}" Width="200px" >Registreer</Button>
     </Grid>
 </UserControl>

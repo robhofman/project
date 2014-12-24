@@ -49,12 +49,22 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
 
             if (!ApplicationVM.token.IsError)
             {
-                appvm.ChangePage(new CustomerVM());
+                appvm.ChangePage(new ProductVM());
             }
             else
             {
                 Error = "Gebruikersnaam of paswoord kloppen niet";
             }
+        }
+
+        public ICommand LogoutCommand
+        {
+            get { return new RelayCommand(Logout); }
+        }
+        private void Logout()
+        {
+            ApplicationVM appvm = App.Current.MainWindow.DataContext as ApplicationVM;
+            appvm.ChangePage(new ManagementLoginVM());
         }
 
         private TokenResponse GetToken()

@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1100">
     <UserControl.DataContext>
-        <vm:KlantLoginVM/>
+        <vm:ManagementLoginVM/>
     </UserControl.DataContext>
     <Grid Background="WhiteSmoke">
         <Grid.RowDefinitions>
@@ -45,8 +45,10 @@
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="1" HorizontalAlignment="Center">Productnaam</Label>
                             <Label Grid.Row="3" HorizontalAlignment="Center">Prijs in euro</Label>
-                            <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Name="txtProductName" ></TextBox>
-                            <TextBox Grid.Row="3" Grid.Column="1" Margin="5" Name="txtPrijs"></TextBox>
+                            <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Name="txtProductName" Text="{Binding SelectedProduct.Productname}" ></TextBox>
+                            <TextBox Grid.Row="3" Grid.Column="1" Margin="5" Name="txtPrijs" Text="{Binding SelectedProduct.Price}"></TextBox>
+                            <Button Grid.Row="4" Grid.Column="1" Name="btnSaveProduct" Command="{Binding SaveProductCommand}" VerticalAlignment="Center" HorizontalAlignment="Left" Height="50" Width="150" Style="{StaticResource button}">Save</Button>
+                            <Button Grid.Row="4" Grid.Column="1" Name="btnNewProduct" Command="{Binding NewProductCommand}" VerticalAlignment="Center" HorizontalAlignment="Left" Height="50"  Width="150" Style="{StaticResource button}" Margin="175,0,0,0">New</Button>
                         </Grid>
                         <Grid Grid.Column="0">
                             <Grid.RowDefinitions>
@@ -55,10 +57,16 @@
                                 <RowDefinition Height="2*"/>
                                 <RowDefinition Height="3*"/>
                             </Grid.RowDefinitions>
-                            <ListBox Grid.Row="1" Margin="10">
-
-                            </ListBox>
-                            <Button Grid.Row="2" Margin="10" Width="150" Style="{StaticResource button}" HorizontalAlignment="Left">Delete</Button>
+                            <ListView Grid.Row="1" Margin="10" ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct}">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Width="50" Header="Id" DisplayMemberBinding="{Binding Path=Id}" />
+                                        <GridViewColumn Width="100" Header="Naam" DisplayMemberBinding="{Binding Path=Productname}"  />
+                                        <GridViewColumn Width="100" Header="prijs" DisplayMemberBinding="{Binding Path=Price}"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                            <Button Grid.Row="2" Margin="10" Width="150" Style="{StaticResource button}" Command="{Binding DeleteProductCommand}" HorizontalAlignment="Left">Delete</Button>
                         </Grid>
                     </Grid>
                 </UserControl>
@@ -308,7 +316,7 @@
                 </UserControl>
             </TabItem>
         </TabControl>
-        <Button Grid.Row="1" Style="{StaticResource button}" FontSize="12" Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top">Log out</Button>
+        <Button Grid.Row="1" Style="{StaticResource button}" Command="{Binding LogoutCommand}" FontSize="12" Grid.Column="1" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top">Log out</Button>
 
     </Grid>
 </UserControl>

@@ -91,6 +91,7 @@
     <Compile Include="ViewModel\KassaLoginVM.cs" />
     <Compile Include="ViewModel\KiesAppVM.cs" />
     <Compile Include="ViewModel\KlantLoginVM.cs" />
+    <Compile Include="ViewModel\KlantRegistreerVM.cs" />
     <Compile Include="ViewModel\ManagementLoginVM.cs" />
     <Compile Include="ViewModel\OrganisationVM.cs" />
     <Compile Include="ViewModel\ProductVM.cs" />
