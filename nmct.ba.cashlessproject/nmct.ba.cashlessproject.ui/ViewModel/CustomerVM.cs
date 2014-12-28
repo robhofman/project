@@ -50,8 +50,8 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
             get { return "Customer page"; }
         }
 
-        private int _id;
-        public int Id
+        private long _id;
+        public long Id
         {
             get { return _id; }
             set { _id = value; }

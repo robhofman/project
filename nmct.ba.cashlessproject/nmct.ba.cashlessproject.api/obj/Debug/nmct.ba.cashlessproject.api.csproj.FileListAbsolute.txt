@@ -199,3 +199,11 @@ C:\Users\rob\Documents\GitHub\nmct.ba.cashlessproject\nmct.ba.cashlessproject.ap
 C:\Users\rob\Documents\GitHub\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\obj\Debug\nmct.ba.cashlessproject.api.csprojResolveAssemblyReference.cache
 C:\Users\rob\Documents\GitHub\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\obj\Debug\nmct.ba.cashlessproject.api.dll
 C:\Users\rob\Documents\GitHub\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\obj\Debug\nmct.ba.cashlessproject.api.pdb
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\bin\beid35libCS.dll
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\bin\System.Net.Http.Extensions.dll
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\bin\System.Net.Http.Primitives.dll
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\bin\Thinktecture.IdentityModel.Client.dll
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\bin\System.Net.Http.Extensions.xml
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\bin\System.Net.Http.Primitives.xml
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\bin\Thinktecture.IdentityModel.Client.pdb
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\nmct.ba.cashlessproject.api\obj\Debug\nmct.ba.cashlessproject.api.csproj.App.config

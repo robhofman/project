@@ -9,13 +9,13 @@ namespace nmct.ba.cashlessproject.model
 {
     public class Customer
     {
-        private int _id;
+        private long _id;
         private string _customername;
         private string _address;
         private byte[] _image;
         private double _balance;
 
-        public int Id
+        public long Id
         {
             get { return _id; }
             set { _id = value; }

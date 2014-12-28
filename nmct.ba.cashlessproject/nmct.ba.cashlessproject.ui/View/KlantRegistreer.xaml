@@ -11,7 +11,7 @@
     </UserControl.DataContext>
     <Grid Background="WhiteSmoke">
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="3*"/>
@@ -35,28 +35,26 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock>Registreer</TextBlock>
-        <Label Grid.Row="1" Margin="120,0,0,0">Voornaam</Label>
+        <TextBlock FontSize="30" Margin="15,0">Registreer</TextBlock>
+       
         <Label Grid.Row="3" Margin="120,0,0,0">Naam</Label>
-        <Label Grid.Row="5" Margin="120,0,0,0">straat + nummer</Label>
-        <Label Grid.Row="7" Margin="120,0,0,0">Gemeente</Label>
-        <Label Grid.Row="9" Margin="120,0,0,0">Email</Label>
+        <Label Grid.Row="5" Margin="120,0,0,0">Address</Label>
+        <Label Grid.Row="7" Margin="120,0,0,0">ID</Label>
+        <Label Grid.Row="9" Margin="120,0,0,0">Balance</Label>
 
         <Label Grid.Row="11" Margin="120,0,0,0">foto</Label>
         <Border BorderThickness="1" BorderBrush="Black" Grid.Row="11" Width="200" HorizontalAlignment="Left" Grid.Column="1" Grid.RowSpan="3">
-            <Image  Width="200px" HorizontalAlignment="Left">
-                <Image.Source>
-                    <BitmapImage/>
-                </Image.Source>
+            <Image  Source="{Binding Picture, UpdateSourceTrigger=PropertyChanged}" Width="200px" HorizontalAlignment="Left">
+                
             </Image>
         </Border>
-        <TextBox Name="txtVoornaam" Grid.Row="1" Grid.Column="1" Width="350" HorizontalAlignment="Left"></TextBox>
-        <TextBox Name="txtNaam" Grid.Row="3" Grid.Column="1" Width="350" HorizontalAlignment="Left"></TextBox>
-        <TextBox Name="txtStraat" Grid.Row="5" Grid.Column="1"  Width="350" HorizontalAlignment="Left"></TextBox>
-        <TextBox Name="txtNummer" Grid.Row="5" Grid.Column="1" Width="350" HorizontalAlignment="Left" ></TextBox>
-        <TextBox Name="txtGemeente" Grid.Row="7" Grid.Column="1" Width="350" HorizontalAlignment="Left"></TextBox>
-        <TextBox Name="txtEmail" Grid.Row="9" Grid.Column="1" Width="350" HorizontalAlignment="Left"></TextBox>
-        
-        <Button Grid.Row="16" Width="150" Style="{StaticResource button}">scan</Button>
+
+        <TextBlock Background="White" Name="txtNaam" Text="{Binding Path=SelectedCustomer.Customername, UpdateSourceTrigger=PropertyChanged}"  Grid.Row="3" Grid.Column="1" Width="350" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Background="White" Name="txtAddress" Text="{Binding Path=SelectedCustomer.Address, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Grid.Column="1"  Width="350" HorizontalAlignment="Left"></TextBlock>
+
+        <TextBlock Background="White" Name="txtID" Text="{Binding Path=SelectedCustomer.Id}" Grid.Row="7" Grid.Column="1" Width="350" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock Background="White" Name="txtBalance" Text="{Binding Path=SelectedCustomer.Balance}" Grid.Row="9" Grid.Column="1" Width="350" HorizontalAlignment="Left"></TextBlock>
+
+        <Button Grid.Row="16" Width="150" Command="{Binding RegistreerCommand}" Style="{StaticResource button}">scan</Button>
     </Grid>
 </UserControl>

@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="beid35libCS, Version=3.5.3.6193, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\beid35libCS.dll</HintPath>
+    </Reference>
     <Reference Include="GalaSoft.MvvmLight">
       <HintPath>..\packages\MvvmLightLibs.5.0.2.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
@@ -90,6 +94,7 @@
     <Compile Include="ViewModel\ErrorlogVM.cs" />
     <Compile Include="ViewModel\KassaLoginVM.cs" />
     <Compile Include="ViewModel\KiesAppVM.cs" />
+    <Compile Include="ViewModel\KlantHerlaadVM.cs" />
     <Compile Include="ViewModel\KlantLoginVM.cs" />
     <Compile Include="ViewModel\KlantRegistreerVM.cs" />
     <Compile Include="ViewModel\ManagementLoginVM.cs" />
@@ -225,12 +230,18 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\model\nmct.ba.cashlessproject.model.csproj">
       <Project>{d08a5d95-6f32-4e15-ace6-cdb54c3a7dd1}</Project>
       <Name>nmct.ba.cashlessproject.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\nmct.ba.cashless.helper\nmct.ba.cashless.helper.csproj">
+      <Project>{6946a51b-7e38-4860-8256-42bd02bf669a}</Project>
+      <Name>nmct.ba.cashless.helper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

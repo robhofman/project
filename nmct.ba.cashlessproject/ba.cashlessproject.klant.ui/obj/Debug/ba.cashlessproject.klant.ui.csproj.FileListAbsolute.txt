@@ -1,0 +1,13 @@
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\ba.cashlessproject.klant.ui.csproj.App.config
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\ba.cashlessproject.klant.ui.csprojResolveAssemblyReference.cache
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\View\KlantHerlaad.baml
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\View\KlantHerlaad.g.cs
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\View\KlantLogin.g.cs
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\View\KlantRegistreer.g.cs
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\View\MainWindow.g.cs
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\View\PageOne.g.cs
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\App.g.cs
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\ba.cashlessproject.klant.ui_MarkupCompile.cache
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\ba.cashlessproject.klant.ui_MarkupCompile.lref
+C:\Users\rob\Documents\GitHub\project\nmct.ba.cashlessproject\ba.cashlessproject.klant.ui\obj\Debug\App.baml

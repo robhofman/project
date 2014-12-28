@@ -15,10 +15,8 @@ namespace nmct.ba.cashlessproject.ui.ViewModel
     class EmployeeVM : ObservableObject, IPage
     {
           public EmployeeVM()
-        {
-           
-                GetEmployees();
-            
+        {           
+                GetEmployees();            
         }
 
         private ObservableCollection<Employee> _employees;
