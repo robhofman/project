@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="nmct.ba.cashlessproject.klant.ui.View.KlantLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:nmct.ba.cashlessproject.klant.ui.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1100">
+
+    <!--<UserControl.Resources>
+        <DataTemplate DataType="{x:Type vm:KlantLoginVM}">
+            <v:KlantRegistreer/>
+        </DataTemplate>
+    </UserControl.Resources>-->
+    <UserControl.DataContext>
+        <vm:KlantLoginVM/>
+    </UserControl.DataContext>
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Label HorizontalAlignment="Center" Grid.Row="1">KaartNummer</Label>
+
+        <TextBox Grid.Row="2" Grid.Column="1" Width="300" Margin="5"></TextBox>
+
+        <!--<Button Grid.Row="6" Style="{StaticResource button}" FontSize="17" Width="175px" Margin="362,0,555,0">Wachtwoord Vergeten</Button>-->
+        <Button Grid.Row="6" Style="{StaticResource button}" Width="175px" >Log in</Button>
+        <Button Grid.Row="8" Command="{Binding GaNaarRegistrerenCommand}" Style="{StaticResource button}" Width="200px" >Registreer</Button>
+    </Grid>
+</UserControl>
