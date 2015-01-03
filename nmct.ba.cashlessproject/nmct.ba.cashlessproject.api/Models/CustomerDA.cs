@@ -41,7 +41,7 @@ namespace nmct.ba.cashlessproject.api.Models
             {
                 list.Add(new Customer()
                     {
-                        Id = Convert.ToInt32(reader["ID"]),
+                        Id = Convert.ToInt64(reader["ID"]),
                         Customername = reader["CustomerName"].ToString(),
                         Address = reader["Address"].ToString(),
                         Image = GetBytes(reader["Picture"].ToString()),
@@ -54,14 +54,16 @@ namespace nmct.ba.cashlessproject.api.Models
 
         public static int InsertCustomer(Customer c, IEnumerable<Claim> claims)
         {
-            string sql = "INSERT INTO Customers VALUES(@ID, @CustomerName, @Address, @Picture, @Balance)";
-            DbParameter par1 = Database.AddParameter("ITDB", "@ID", c.Id);
-            DbParameter par2 = Database.AddParameter("ITDB", "@CustomerName", c.Customername);
-            DbParameter par3 = Database.AddParameter("ITDB", "@Address", c.Address);
-            DbParameter par4 = Database.AddParameter("ITDB", "@Picture", c.Image);
-            DbParameter par5 = Database.AddParameter("ITDB", "@Balance", c.Balance);
+            
+                string sql = "INSERT INTO Customers VALUES(@ID, @CustomerName, @Address, @Picture, @Balance)";
+                DbParameter par1 = Database.AddParameter("ITDB", "@ID", c.Id);
+                DbParameter par2 = Database.AddParameter("ITDB", "@CustomerName", c.Customername);
+                DbParameter par3 = Database.AddParameter("ITDB", "@Address", c.Address);
+                DbParameter par4 = Database.AddParameter("ITDB", "@Picture", c.Image);
+                DbParameter par5 = Database.AddParameter("ITDB", "@Balance", c.Balance);
 
-            return Database.InsertData(Database.GetConnection(CreateConnectionString(claims)), sql, par1, par2, par3, par4);
+                return Database.InsertData(Database.GetConnection(CreateConnectionString(claims)), sql, par1, par2, par3, par4, par5);
+   
         }
 
         public static void UpdateCustomer(Customer c, IEnumerable<Claim> claims)
@@ -99,5 +101,21 @@ namespace nmct.ba.cashlessproject.api.Models
             return bytes;
         }
 
+        public static Customer GetCustomerByID(string rijks, IEnumerable<Claim> claims)
+        {
+            Customer customer = new Customer();
+            Int64 ID = Convert.ToInt64(rijks);
+            string sql = "SELECT * FROM Customer WHERE Id=@ID";
+            DbParameter par1 = Database.AddParameter("ITDB", "@NationalNumber", ID);
+            DbDataReader reader = Database.GetData(Database.GetConnection(CreateConnectionString(claims)), sql, par1);
+
+            while (reader.Read())
+            {
+                customer = Create(reader);
+            }
+            reader.Close();
+
+            return customer;
+        }
     }
 }

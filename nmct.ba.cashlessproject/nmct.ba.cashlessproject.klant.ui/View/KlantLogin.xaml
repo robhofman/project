@@ -30,10 +30,11 @@
         </Grid.RowDefinitions>
         <Label HorizontalAlignment="Center" Grid.Row="1">KaartNummer</Label>
 
-        <TextBox Grid.Row="2" Grid.Column="1" Width="300" Margin="5"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Id}" Width="300" Margin="5"></TextBox>
 
         <!--<Button Grid.Row="6" Style="{StaticResource button}" FontSize="17" Width="175px" Margin="362,0,555,0">Wachtwoord Vergeten</Button>-->
-        <Button Grid.Row="6" Style="{StaticResource button}" Width="175px" >Log in</Button>
-        <Button Grid.Row="8" Command="{Binding GaNaarRegistrerenCommand}" Style="{StaticResource button}" Width="200px" >Registreer</Button>
+        <Button Grid.Row="4" Style="{StaticResource button}" Command="{Binding ScanIDCommand}" Width="175px" >Scan</Button>
+        <Button Grid.Row="6" Command="{Binding KlantLoginCommand}" Style="{StaticResource button}" Width="175px" >Log in </Button>
+        <Button Grid.Row="8" Command="{Binding GaNaarRegistrerenCommand}" Style="{StaticResource button}" Width="175px" >Registreer</Button>
     </Grid>
 </UserControl>

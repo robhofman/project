@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Kassa's</h1>
+<select onchange="selectedOrg(this)">
+    <option value="nothing">Selecteer een organisatie</option>
+    @foreach (var organisation in ViewBag.Organisations)
+    {
+        <option value="@organisation.Id">@organisation.OrganisationName</option>
+
+
+    }
+</select>
+@if (ViewBag.Registers != null)
+{
+    if (ViewBag.Registers.Count == 0)
+    {
+        <div id="noregister">
+            <p>Geen gebruikte kassa's!</p>
+        </div>
+    }
+    else
+    {
+        <h2>
+            Gebruikte kassa's van @ViewBag.Registers[0].OrganisationName
+        </h2>
+        <table>
+            <tr>
+                <th>Kassa naam</th>
+                <th>Toestel naam</th>
+            </tr>
+            @foreach (var register in ViewBag.Registers)
+            {
+                <tr>
+                    <td>
+                        @register.Registername
+                    </td>
+                    <td>
+                        @register.Device
+                    </td>
+                    <td><a href="~/Kassa/Update/@register.Id" class="btn btn-danger">Bewerk</a></td>
+                </tr>
+            }
+        </table>
+    }
+}
+<h2>
+    Beschikbare kassa's
+</h2>
+<table>
+    <tr>
+        <th>Kassa naam</th>
+        <th>Toestel naam</th>
+    </tr>
+    @foreach (var register in ViewBag.AvailableRegisters)
+    {
+        <tr>
+            <td>
+                @register.Registername
+            </td>
+            <td>
+                @register.Device
+            </td>
+            <td><a href="~/Kassa/Toekennen/@register.Id" class="btn btn-danger">Bewerk</a></td>
+        </tr>
+    }
+</table>
+<script>
+        function selectedOrg(obj) {
+            var urlstring = "/Kassa/Index?org=";
+            var selectedOrg = obj.options[obj.selectedIndex];
+            if (selectedOrg.value != "nothing") {
+                window.location = urlstring + selectedOrg.value;
+            }
+        }
+</script>

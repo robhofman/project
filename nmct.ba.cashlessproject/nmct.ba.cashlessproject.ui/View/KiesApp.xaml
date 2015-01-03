@@ -27,7 +27,6 @@
             <RowDefinition Height="58*"/>
         </Grid.RowDefinitions>
 
-        <Button Content="klant" Margin="31,23,14,18" Grid.Row="1" Command="{Binding GaNaarKlantCommand}"/>
         <Button Content="management" Margin="12,23,11,18" Grid.Row="1" Grid.Column="1" Command="{Binding GaNaarManagementCommand}"/>
         <Button Content="kassa" Margin="8,23,32,18"  Grid.Row="1" Grid.Column="2" Command="{Binding GaNaarMedewerkerCommand}"/>
 

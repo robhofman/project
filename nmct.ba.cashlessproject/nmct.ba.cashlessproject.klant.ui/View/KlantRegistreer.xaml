@@ -55,6 +55,7 @@
         <TextBlock Background="White" Name="txtID" Text="{Binding Path=SelectedCustomer.Id}" Grid.Row="7" Grid.Column="1" Width="350" HorizontalAlignment="Left"></TextBlock>
         <TextBlock Background="White" Name="txtBalance" Text="{Binding Path=SelectedCustomer.Balance}" Grid.Row="9" Grid.Column="1" Width="350" HorizontalAlignment="Left"></TextBlock>
 
-        <Button Grid.Row="16" Width="150" Command="{Binding RegistreerCommand}" Style="{StaticResource button}">scan</Button>
+        <Button Grid.Row="16" Width="150" Command="{Binding RegistreerCommand}" Style="{StaticResource button}">Scan</Button>
+        <Button Content="Save" Style="{StaticResource button}" Command="{Binding KlantOpslaanCommand}" Grid.Column="1" HorizontalAlignment="Left" Height="31" Grid.Row="16" Width="150"/>
     </Grid>
 </UserControl>

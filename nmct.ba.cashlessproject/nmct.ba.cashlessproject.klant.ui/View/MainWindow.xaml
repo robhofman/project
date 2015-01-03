@@ -17,7 +17,9 @@
         <DataTemplate DataType="{x:Type vm:KlantRegistreerVM}">
             <v:KlantRegistreer/>
         </DataTemplate>
-
+        <DataTemplate DataType="{x:Type vm:KlantHerlaadVM}">
+            <v:KlantHerlaad/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <!-- 

@@ -11,16 +11,23 @@ namespace nmct.ba.cashlessproject.model
         private int _id;
         private string registername;
         private string _device;
-        private DateTime _purchasedate;
-        private DateTime _expiredate;
+        private string _organisationName;
+        private string _purchasedate;
+        private string _expiredate;
 
-        public DateTime Expiredate
+        public string OrganisationName
+        {
+            get { return _organisationName; }
+            set { _organisationName = value; }
+        }
+
+        public string Expiredate
         {
             get { return _expiredate; }
             set { _expiredate = value; }
         }
 
-        public DateTime Purchasedate
+        public string Purchasedate
         {
             get { return _purchasedate; }
             set { _purchasedate = value; }

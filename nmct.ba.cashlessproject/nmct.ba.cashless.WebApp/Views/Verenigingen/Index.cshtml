@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    td {
+        padding-right: 35px;
+    }
+</style>
+<h2>Verenigingen</h2>
+
+<table>
+    <tr>
+        <th>
+            Naam
+        </th>
+        <th>
+            Adres
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Telefoon
+        </th>
+    </tr>
+    @foreach (var organisation in ViewBag.Organisations)
+    {
+        <tr>
+            <td>@organisation.OrganisationName</td>
+            <td>@organisation.Address</td>
+            <td>@organisation.Email</td>
+            <td>@organisation.Phone</td>
+            <td><a href="~/verenigingen/update/@organisation.Id" class="btn btn-danger">Bewerk</a></td>
+        </tr>
+    }
+</table>
+<a href="~/verenigingen/toevoegen" class="btn btn-danger">Nieuwe vereniging.</a>

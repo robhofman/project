@@ -38,7 +38,11 @@ namespace nmct.ba.cashlessproject.api.Controllers
 
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
-
+        public Customer GetById(string Rijks)
+        {
+            ClaimsPrincipal p = RequestContext.Principal as ClaimsPrincipal;
+            return CustomerDA.GetCustomerByID(Rijks, p.Claims);
+        }
 
     
     }

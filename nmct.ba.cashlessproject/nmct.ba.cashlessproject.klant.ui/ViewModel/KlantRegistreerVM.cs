@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using Newtonsoft.Json;
 using nmct.ba.cashlessproject.helper;
 using nmct.ba.cashlessproject.klant.ui.ViewModel;
 using nmct.ba.cashlessproject.model;
@@ -6,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -25,25 +27,62 @@ namespace nmct.ba.cashlessproject.klant.ui.ViewModel
             get { return new RelayCommand(Registreer); }
         }
 
+        public ICommand KlantOpslaanCommand
+        {
+            get { return new RelayCommand(Opslaan); }
+
+        }
+
+        private async void Opslaan()
+        {
+            string input = JsonConvert.SerializeObject(SelectedCustomer);
+
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                HttpResponseMessage response = await client.PostAsync("http://localhost:15237/api/Customer", new StringContent(input, Encoding.UTF8, "application/json"));
+                if (response.IsSuccessStatusCode)
+                {
+                    string output = await response.Content.ReadAsStringAsync();
+
+                    ApplicationVM appvm = App.Current.MainWindow.DataContext as ApplicationVM;
+                    appvm.ChangePage(new KlantHerlaadVM());
+                }
+                else
+                {
+                    Console.WriteLine("error");
+                }
+            }
+        }
+
         private void Registreer()
         {
             maakKlant();
         }
 
         public Customer maakKlant()
-        { 
+        {
+
             EIDReader data = new EIDReader();
             Customer c = new Customer();
-            c.Customername = data.Name;
-            c.Address = data.Street + data.Address;
-            c.Balance = 0;
-            c.Id = Int64.Parse(data.Rijks);
-            c.Image = data.Picture;
-            Picture = byteArrayToImage(data.Picture);
-            SelectedCustomer = c;
-            Customer x = SelectedCustomer;
-            
+            try
+            {
+                c.Customername = data.Name;
+                c.Address = data.Street + data.Address;
+                c.Balance = 0;
+                c.Id = Int64.Parse(data.Rijks);
+                Int64 k = c.Id;
+                c.Image = data.Picture;
+                Picture = byteArrayToImage(data.Picture);
+                SelectedCustomer = c;
+                Customer x = SelectedCustomer;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
             return c;
+
         }
 
         private BitmapImage _picture;

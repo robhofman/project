@@ -7,6 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Thinktecture.IdentityModel.Client;
+using nmct.ba.cashlessproject.helper;
+using nmct.ba.cashlessproject.model;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace nmct.ba.cashlessproject.klant.ui.ViewModel
 {
@@ -41,23 +45,48 @@ namespace nmct.ba.cashlessproject.klant.ui.ViewModel
 
         private void KlantLogin()
         {
-            //ApplicationVM appvm = App.Current.MainWindow.DataContext as ApplicationVM;
-            //ApplicationVM.token = GetToken();
-
-            //if (!ApplicationVM.token.IsError)
-            //{
-            //    appvm.ChangePage(new ProductVM());
-            //}
-            //else
-            //{
-            //    Error = "id bestaat niet";
-            //}
+            VindCustomer(Id);
         }
 
-        //private TokenResponse GetToken()
-        //{
-        //    OAuth2Client client = new OAuth2Client(new Uri("http://localhost:15237/token"));
-        //    return client.RequestResourceOwnerPasswordAsync(Username, Password).Result;
-        //}    
+        public ICommand ScanIDCommand
+        {
+            get { return new RelayCommand(ScanID); }
+        }
+
+        private void ScanID()
+        {
+            zoekID();
+        }
+
+        private string zoekID()
+        {
+            EIDReader data = new EIDReader();
+            Id = Int64.Parse(data.Rijks);
+            return data.Rijks;           
+        }
+
+        private Int64 _id;
+
+        public Int64 Id
+        {
+            get { return _id; }
+            set { _id = value; OnPropertyChanged("Id"); }
+        }
+
+        private async void VindCustomer(Int64 rijks)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.SetBearerToken(ApplicationVM.token.AccessToken);
+                
+                HttpResponseMessage response = await client.GetAsync("http://localhost:15237/api/customer?id=" + rijks.ToString());
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = await response.Content.ReadAsStringAsync();
+                    Customer c= JsonConvert.DeserializeObject<Customer>(json);
+                    ApplicationVM.customer = c;
+                }
+            }
+        }
     }
 }

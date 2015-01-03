@@ -40,10 +40,12 @@ namespace nmct.ba.cashlessproject.helper
             catch (BEID_Exception ex)
             {
                 BEID_ReaderSet.releaseSDK();
+                Console.WriteLine(ex);
             }
             catch (Exception ex)
             {
                 BEID_ReaderSet.releaseSDK();
+                Console.WriteLine(ex);
             }
             finally
             {

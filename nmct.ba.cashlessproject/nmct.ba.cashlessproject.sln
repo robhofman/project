@@ -13,9 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nmct.ba.cashlessproject.api
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nmct.ba.cashless.helper", "nmct.ba.cashless.helper\nmct.ba.cashless.helper.csproj", "{6946A51B-7E38-4860-8256-42BD02BF669A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{A62821B3-AE6E-4E9C-BDAB-359FEE61B1E1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nmct.ba.cashlessproject.klant.ui", "nmct.ba.cashlessproject.klant.ui\nmct.ba.cashlessproject.klant.ui.csproj", "{4E9DBF8B-4D62-47DE-ADFA-B418BB4047B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nmct.ba.cashless.WebApp", "nmct.ba.cashless.WebApp\nmct.ba.cashless.WebApp.csproj", "{C600D138-5FB2-401B-B43D-64013FDBFAF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nmct.ba.cashlessproject.medewerker.ui", "nmct.ba.cashlessproject.medewerker.ui\nmct.ba.cashlessproject.medewerker.ui.csproj", "{03CFB03C-3BFF-4B0C-9F7F-F7AFEC45A5E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,14 +45,18 @@ Global
 		{6946A51B-7E38-4860-8256-42BD02BF669A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6946A51B-7E38-4860-8256-42BD02BF669A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6946A51B-7E38-4860-8256-42BD02BF669A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A62821B3-AE6E-4E9C-BDAB-359FEE61B1E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A62821B3-AE6E-4E9C-BDAB-359FEE61B1E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A62821B3-AE6E-4E9C-BDAB-359FEE61B1E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A62821B3-AE6E-4E9C-BDAB-359FEE61B1E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E9DBF8B-4D62-47DE-ADFA-B418BB4047B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E9DBF8B-4D62-47DE-ADFA-B418BB4047B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E9DBF8B-4D62-47DE-ADFA-B418BB4047B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E9DBF8B-4D62-47DE-ADFA-B418BB4047B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C600D138-5FB2-401B-B43D-64013FDBFAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C600D138-5FB2-401B-B43D-64013FDBFAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C600D138-5FB2-401B-B43D-64013FDBFAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C600D138-5FB2-401B-B43D-64013FDBFAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03CFB03C-3BFF-4B0C-9F7F-F7AFEC45A5E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03CFB03C-3BFF-4B0C-9F7F-F7AFEC45A5E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03CFB03C-3BFF-4B0C-9F7F-F7AFEC45A5E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03CFB03C-3BFF-4B0C-9F7F-F7AFEC45A5E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
